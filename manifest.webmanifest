@@ -1,0 +1,36 @@
+﻿{
+  "name": "Lightning Slideshow",
+  "short_name": "LSlideshow",
+  "start_url": ".",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "Lightning-fast slideshow for your own images and PDFs.",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "id": "LightningSlideshow",
+  "scope": ".",
+  "orientation": "landscape",
+  "screenshots": [
+    {
+      "src": "screenshots/slideshow-preview.png",
+      "sizes": "565x472",
+      "type": "image/png"
+    }
+  ]
+}

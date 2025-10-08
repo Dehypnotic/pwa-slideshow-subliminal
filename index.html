@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightning Slideshow</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <main id="app">
+    <section id="loader" class="panel">
+      <h1>⚡Lightning Slideshow⚡</h1>
+      <div id="drop-zone" tabindex="0">
+        <p>Drop images, saves, or PDFs here</p>
+        <button id="select-files" type="button">Choose files</button>
+        <input id="file-input" type="file" accept="image/*,application/pdf,application/json,.json" multiple aria-label="Choose images, PDFs, or saved slideshows" />
+      </div>
+      <div class="control-group">
+        <label for="delay-range">Delay per image (ms)</label>
+        <div class="control-row">
+          <input id="delay-range" type="range" min="0" max="2000" step="10" value="200">
+          <input id="delay-input" type="number" min="0" max="2000" step="10" value="200">
+        </div>
+      </div>
+      <div class="action-row">
+        <button id="start-slideshow" type="button" disabled>Start</button>
+        <button id="paste-clipboard" class="secondary" type="button">Paste</button>
+        <button id="save-gallery" class="secondary" type="button">Save</button>
+        <button id="reset-gallery" class="secondary" type="button">Reset</button>
+      </div>
+    </section>
+    <section id="stage" class="hidden" aria-live="off">
+      <img id="stage-image" alt="Slideshow image">
+    </section>
+  </main>
+  <script src="vendor/pdfjs/pdf.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
